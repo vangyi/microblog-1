@@ -1,4 +1,18 @@
 Microblog::Application.routes.draw do
+  resources :entries
+
+  get "entries/index"
+
+  get "entries/new"
+
+  get "entries/create"
+
+  get "entries/edit"
+
+  get "entries/update"
+
+  get "entries/destroy"
+
   resources :users
 
   # The priority is based upon order of creation:
