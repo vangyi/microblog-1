@@ -6,6 +6,9 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'bootstrap-sass'
+gem 'bootstrap-rails'
+gem 'bootswatch-rails'
 
 
 # Gems used only for assets and not required
@@ -25,6 +28,9 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'guard-rspec'
+  gem 'rb-fsevent', :require => false
+  gem 'ruby_gntp'
 end
 
 # To use ActiveModel has_secure_password

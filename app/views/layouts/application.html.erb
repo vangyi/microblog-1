@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Microblog</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Microblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="/">Microblog</a>
+          <ul class="nav pull-right"> 
+            <li><%= link_to "Users", users_path %></li>
+            <li><%= link_to "Entries", entries_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br style="clear:both;">
+    <br style="clear:both;">
+    <br style="clear:both;">
+    <br style="clear:both;">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="row-fluid">
+            <%= yield %>
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
 
-<%= yield %>
+      <hr>
 
-</body>
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+  </body>
 </html>

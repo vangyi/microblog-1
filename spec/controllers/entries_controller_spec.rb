@@ -24,7 +24,11 @@ describe EntriesController do
   # Entry. As you add validations to Entry, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
+<<<<<<< HEAD
     {}
+=======
+    {post: "test post"}
+>>>>>>> b2c64ae07013012ff6166e129dff2820b28fb57e
   end
 
   # This should return the minimal set of values that should be in the session
