@@ -1,19 +1,6 @@
 Microblog::Application.routes.draw do
-  resources :entries
-
-  get "entries/index"
-
-  get "entries/new"
-
-  get "entries/create"
-
-  get "entries/edit"
-
-  get "entries/update"
-
-  get "entries/destroy"
-
   resources :users
+  resources :entries
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,7 +51,7 @@ Microblog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
